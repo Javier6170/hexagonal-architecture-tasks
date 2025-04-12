@@ -1,13 +1,13 @@
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:5432/tasksdb
-    username: tasks
-    password: postgres
+    url: ${SPRING_DATASOURCE_URL}
+    username: ${SPRING_DATASOURCE_USERNAME}
+    password: ${SPRING_DATASOURCE_PASSWORD}
     driver-class-name: org.postgresql.Driver
 
   jpa:
     hibernate:
-      ddl-auto: update
+      ddl-auto: create # Usa esto SOLO para probar que funcione. Luego vuelves a "update"
     database-platform: org.hibernate.dialect.PostgreSQLDialect
     show-sql: true
     properties:
