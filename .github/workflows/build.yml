@@ -1,0 +1,28 @@
+name: Java CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: 🧾 Checkout repo
+      uses: actions/checkout@v3
+
+    - name: ☕ Setup Java
+      uses: actions/setup-java@v3
+      with:
+        java-version: '17'
+        distribution: 'temurin'
+
+    - name: 🛠️ Build with Maven
+      run: mvn clean install --no-transfer-progress
+
+    - name: ✅ Run tests
+      run: mvn test
