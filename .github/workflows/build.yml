@@ -3,13 +3,20 @@ name: Java CI
 on:
   push:
     branches: [ main ]
+    paths:
+      - 'backend-mentia/**'
   pull_request:
     branches: [ main ]
+    paths:
+      - 'backend-mentia/**'
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
+
+    defaults:
+      run:
+        working-directory: backend-mentia
 
     steps:
     - name: 🧾 Checkout repo

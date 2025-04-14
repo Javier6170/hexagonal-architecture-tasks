@@ -1,37 +1,60 @@
-# 🧩 Proyecto Tasks - Arquitectura Hexagonal con Spring Boot
+# 🌿 Mentia – Plataforma de Salud Mental Open Source
 
-Este proyecto es una API REST para la gestión de tareas, desarrollada con arquitectura hexagonal. Incluye prácticas modernas como validaciones, manejo de errores, documentación automática con Swagger, y mapeo entre capas usando MapStruct. Ideal para reforzar conceptos de diseño limpio y buenas prácticas. 🚀
+![Mentia Logo](./imgs-mentia/mentia-logo.png)
 
-## ⚙️ Tecnologías
+> Versión: `v1.0.0-alpha`
 
-- Java 17
-- Spring Boot 3.4.4
-- Maven
-- PostgreSQL
-- MapStruct
-- Swagger/OpenAPI
-- Docker & Docker Compose
-- Arquitectura Hexagonal 🧱
-
-## 📁 Estructura de carpetas (Clean & Hexagonal)
-
-📦src ┣ 📂domain ┃ ┣ 📂model → Entidades del dominio ┃ ┗ 📂port → Interfaces que el dominio espera ┣ 📂application → Casos de uso (Servicios) ┣ 📂infrastructure ┃ ┣ 📂controller → Controladores REST ┃ ┣ 📂dto → DTOs para requests/responses ┃ ┣ 📂persistence → Adaptadores y repositorios JPA ┃ ┗ 📂mapper → Mapeos con MapStruct
-
+**Mentia** es una iniciativa open source orientada a la creación de una plataforma digital integral para el **cuidado de la salud mental**, combinando tecnología moderna, diseño empático y un enfoque centrado en el ser humano.  
+Nuestro objetivo es brindar herramientas accesibles, seguras y éticas que ayuden a las personas a **gestionar su bienestar emocional, establecer hábitos saludables y fortalecer su autoconocimiento**.
 
 ---
 
-## 🐳 Cómo Ejecutar con Docker
+## 💡 ¿Por qué Mentia?
 
-```bash
-./build-and-run.sh
-```
+La salud mental es un derecho, no un privilegio. En un mundo cada vez más acelerado, **Mentia nace como una respuesta tecnológica consciente**, pensada para acompañar a las personas en su proceso de autocuidado y sanación, sin barreras económicas ni técnicas.
 
-Este script hace lo siguiente:
+Queremos crear un espacio donde la tecnología:
+- No invada, **sino acompañe**.
+- No explote los datos, **sino los proteja**.
+- No sustituya la ayuda profesional, **sino la potencie**.
 
-🧪 Ejecuta los tests
+---
 
-🔨 Compila el proyecto
+## 🎯 Objetivos del proyecto
 
-🐳 Reconstruye la imagen y levanta el servicio con Docker Compose
+- Ofrecer una API y plataforma modular que permita crear herramientas para el bienestar mental.
+- Integrar funcionalidades como tareas terapéuticas, seguimiento emocional, diario personal, rutinas saludables y más.
+- Mantener una arquitectura limpia, escalable y de fácil contribución para la comunidad.
+- Respetar siempre la privacidad, la ética digital y la dignidad humana.
 
+---
 
+## 🌍 En qué creemos
+
+- En el poder del **software libre** para generar impacto real.
+- En la importancia de **cuidar la mente tanto como el cuerpo**.
+- En una tecnología que **humaniza** en lugar de deshumanizar.
+
+---
+
+## 🤝 Contribuye
+
+¿Tienes ideas, código, tiempo o simplemente quieres formar parte?  
+Mentia está abierto a colaboraciones. ¡Queremos construir esto juntos! Puedes abrir issues, enviar PRs o escribirnos directamente. Cada aporte suma.
+
+---
+
+## 📄 Licencia
+
+Este proyecto está licenciado bajo la **[MIT License](LICENSE)**.  
+Puedes usarlo, modificarlo y distribuirlo libremente, siempre que respetes los términos.
+
+---
+
+## ✨ Autor
+
+**Javier Rodríguez M.**  
+Desarrollador de software con propósito social.  
+[GitHub](https://github.com/javierrodriguezmdev) – [LinkedIn](https://linkedin.com/in/javierrodriguezmdev)
+
+---

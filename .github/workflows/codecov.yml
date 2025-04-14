@@ -3,13 +3,21 @@ name: Codecov Coverage
 on:
   push:
     branches: [ main ]
+    paths:
+      - 'backend-mentia/**'
   pull_request:
     branches: [ main ]
+    paths:
+      - 'backend-mentia/**'
 
 jobs:
   test:
     name: Generate Coverage Report
     runs-on: ubuntu-latest
+
+    defaults:
+      run:
+        working-directory: backend-mentia
 
     steps:
     - name: 📥 Checkout repository
@@ -27,7 +35,7 @@ jobs:
     - name: 📤 Upload coverage to Codecov
       uses: codecov/codecov-action@v4
       with:
-        token: ${{ secrets.CODECOV_TOKEN }} # solo si es repositorio privado
+        token: ${{ secrets.CODECOV_TOKEN }}
         files: ./target/site/jacoco/jacoco.xml
         flags: unittests
         name: codecov-coverage
